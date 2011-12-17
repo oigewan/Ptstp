@@ -1,7 +1,14 @@
 package com.ptstp.car;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import com.ptstp.R;
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -119,8 +126,21 @@ public class CarAdapter extends BaseAdapter {
 		TextView Story = (TextView) car.findViewById(R.id.carStory);
 		Story.setText(this.car.getStory());
 		
-		ImageView image = (ImageView) car.findViewById(R.id.carImage);
-		image.setImageURI(Uri.parse(this.car.getImgSrc()));
+		URL url = null;
+		ImageView image = null;
+		
+		try {
+			url = new URL(this.car.getImgSrc());
+			InputStream io = url.openStream();
+			Bitmap img = BitmapFactory.decodeStream(io);
+			if (img != null) {
+				image = (ImageView) car.findViewById(R.id.carImage);
+				image.setImageBitmap(img);
+			}
+		}
+		catch (Exception e) {
+			// Eat the error for now
+		}
 		
 		// Add the modifications to the view one at a time
 		for (Modification mod : this.car.getMods()) {
