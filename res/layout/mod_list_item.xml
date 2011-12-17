@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/modLayout"
+    >
+    <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="fill_parent" android:text="@string/defaultModTitle" android:id="@+id/carModTitle" android:textColor="@color/green"></TextView>
+    <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="fill_parent" android:text="@string/defaultModItem" android:id="@+id/carModItem"></TextView>
+</LinearLayout>

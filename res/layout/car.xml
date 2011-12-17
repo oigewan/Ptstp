@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:id="@+id/carScrollLayout"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:scrollbarFadeDuration="800">
+
+	<LinearLayout
+	    android:id="@+id/carLayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+
+	    <RelativeLayout
+	        android:id="@+id/carDetails"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="25dp">
+
+	        <TextView
+	            android:id="@+id/carYear"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignParentTop="true"
+	            android:layout_marginRight="20dp"
+	            android:text="@string/defaultYear"
+	            android:textSize="50dp" >
+	        </TextView>
+
+	        <TextView
+	            android:id="@+id/carMake"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop="true"
+	            android:layout_toRightOf="@+id/carYear"
+	            android:text="@string/defaultMake"
+	            android:layout_marginTop="8dp"
+	            android:textAppearance="?android:attr/textAppearanceMedium" >
+	        </TextView>
+
+	        <TextView
+	            android:id="@+id/carModel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/carMake"
+	            android:layout_toRightOf="@+id/carYear"
+	            android:text="@string/defaultModel"
+	            android:textAppearance="?android:attr/textAppearanceMedium" >
+	        </TextView>
+	    </RelativeLayout>
+
+	    <RelativeLayout
+	        android:id="@+id/carDetailsLayout"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="5dp">
+
+	        <TextView
+	            android:id="@+id/carHP"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignParentTop="true"
+	            android:layout_marginRight="20dp"
+	            android:minWidth="70dp"
+	            android:text="@string/unknown"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	            android:textSize="25dp" >
+
+	        </TextView>
+
+	        <TextView
+	            android:id="@+id/carHPConfirmed"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_below="@+id/carHP"
+	            android:text="@string/estimated"
+	            android:textColor="@color/customRed" >
+	        </TextView>
+
+	        <TextView
+	            android:id="@+id/timeTypeText"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop="true"
+	            android:layout_marginRight="10dp"
+	            android:layout_toRightOf="@+id/carHP"
+	            android:text="@string/quarterMile"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	            android:textSize="25dp" >
+
+	        </TextView>
+
+	        <TextView
+	            android:id="@+id/carTime"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop="true"
+	            android:layout_toRightOf="@+id/timeTypeText"
+	            android:text="@string/unknown"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	            android:textSize="25dp" >
+
+	        </TextView>
+
+	        <TextView
+	            android:id="@+id/carTimeConfirmed"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignLeft="@+id/timeTypeText"
+	            android:layout_below="@+id/timeTypeText"
+	            android:layout_marginRight="5dp"
+	            android:text="@string/estimated"
+	            android:textColor="@color/customRed" >
+	        </TextView>
+
+	        <TextView
+	            android:id="@+id/carAtSign"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignTop="@+id/carTimeConfirmed"
+	            android:layout_marginRight="5dp"
+	            android:layout_toRightOf="@+id/carTimeConfirmed"
+	            android:text="@string/atSign" >
+	        </TextView>
+
+	        <TextView
+	            android:id="@+id/carMPH"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignTop="@+id/carAtSign"
+	            android:layout_toRightOf="@+id/carAtSign"
+	            android:text="@string/defaultMPH" >
+	        </TextView>
+	    </RelativeLayout>
+
+	    <ImageView
+	        android:id="@+id/carImage"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:contentDescription="@string/carImageAlt"
+	        android:src="@drawable/icon" >
+	    </ImageView>
+
+	    <TextView
+	        android:id="@+id/carStoryHeader"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="20dp"
+	        android:layout_marginTop="20dp"
+	        android:background="@color/white"
+	        android:text="@string/carStoryTitle"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textColor="@color/black" >
+	    </TextView>
+
+	    <TextView
+	        android:id="@+id/carStory"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/defaultCarStory"
+	        android:textAppearance="?android:attr/textAppearanceMedium" >
+	    </TextView>
+
+	    <TextView
+	        android:id="@+id/carModsTitle"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="20dp"
+	        android:layout_marginTop="20dp"
+	        android:background="@color/white"
+	        android:text="@string/carModsTitle"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textColor="@color/black" >
+	    </TextView>
+	</LinearLayout>
+
+</ScrollView>

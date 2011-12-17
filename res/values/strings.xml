@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="close">Close</string>
+    <string name="appName">PtStp</string>
+    <string name="defaultYear">1900</string>
+    <string name="defaultMake">Make</string>
+    <string name="defaultModel">Model</string>
+    <string name="estimated">estimated</string>
+    <string name="confirmed">confirmed</string>
+    <string name="quarterMile">1/4 Mile:</string>
+    <string name="eigthMile">1/8 Mile:</string>
+    <string name="unknown">N/A</string>
+    <string name="atSign">" @ "</string>
+    <string name="defaultMPH">999 MPH</string>
+    <string name="carStoryTitle">Car Story</string>
+    <string name="defaultCarStory">"This is where the car's history should go"</string>
+    <string name="carModsTitle">Mods</string>
+    <string name="carImageAlt">Picture of the Car</string>
+    <string name="defaultModTitle">A Mod</string>
+    <string name="defaultModItem">Mod Description</string>
+    <string name="defaultErrorHeader">Oops&#8230;</string>
+    <string name="defaultErrorMessage">Something bad happened, so we can\'t fulfill your request. Please try again later.</string>
+    <string name="networkErrorMessage">The PitStop server is currently unavailable, so we can\'t show you want you wanted. Feel free to try again later.</string>
+    <string name="responseErrorMessage">We got something back from the PitStop server, but it made no sense. Please notify us of the problem at test@me.com</string>
+    <string name="testButtonText">Test Car</string>
+    <string name="qrButtonText">Read QR Code</string>
+    <string name="searching">Searching&#8230;</string>
+</resources>
